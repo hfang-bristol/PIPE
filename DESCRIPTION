@@ -2,12 +2,12 @@ Package: PIPE
 Type: Package
 Title: Pleiotropy-driven therapeutic target prediction
 Version: 1.0.0
-Date: 2023-12-20
+Date: 2024-3-25
 Authors@R: c(person("Hai", "Fang", email="fh12355@rjh.com.cn", role=c("aut","cre")))
 Maintainer: Hai Fang <fh12355@rjh.com.cn>
 Depends: R (>= 4.3), igraph, ggplot2
 Imports: BiocGenerics, dplyr, forcats, GenomicRanges, ggnetwork, ggrepel, IRanges, magrittr, Matrix, methods, osfr, purrr, readr, stats, stringr, tibble, tidyr, XML, pbapply, curl
-Suggests: coin, foreach, ggraph, ggridges, grid, gridExtra, RColorBrewer, ROCR, ggupset, rtracklayer, Gviz, MASS, dnet, graphics, grDevices, S4Vectors, utils, ggbio, GenomeInfoDb, doParallel, fgsea, scales, supraHex, data.tree, jsonlite
+Suggests: coin, foreach, ggraph, ggridges, grid, gridExtra, RColorBrewer, ROCR, ggupset, rtracklayer, Gviz, MASS, graphics, grDevices, S4Vectors, utils, ggbio, GenomeInfoDb, doParallel, fgsea, scales, supraHex, data.tree, jsonlite
 Description: This package implements pleiotropy-driven therapeutic target prediction, with two components (prioritisation and evaluation). It is capable of ab initio resolving pleiotropic associations (arising from cross-disease genetic findings) for translational use in therapeutic target prioritisation and evaluation. The uniqueness of the PIPE framework is in establishing the link from pleiotropic loci (including those located in the non-coding genome) to candidate target genes; implemented so through leveraging the value of multi-modal regulatory genomic datasets (genomic evidence) and the knowledge of protein interactions (network evidence). Furthermore, it can be used to identifying specific diseases where pleiotropy informs clinical therapeutics, and also used to determine disease relationships based on the leading prioritisation information. In addition to target gene prioritisation, the PIPE is also unique in identifying a network of highly prioritised genes that mediate crosstalk between molecular pathways, generating a concise and manageable list of target genes at the pathway crosstalk level.
 Collate:
     'ClassMethod-PIPE.r'
@@ -73,5 +73,17 @@ Collate:
     'oSEAballoon.r'
     'oSEAupset.r'
     'oRepurpose.r'
+    'oPvalAggregate.r'
+    'oDAGlevel.r'
+    'oDAGroot.r'
+    'oDAGreverse.r'
+    'oNetPipeline.r'
+    'oBUMfit.r'
+    'oBUMscore.r'
+    'oFDRscore.r'
+    'oNetFind.r'
+    'oNetConfidence.r'
+    'visNet.r'
+    'visDAG.r'
 License: GPL-2
 biocViews: Software, SystemsBiology, FunctionalGenomics, GenePrediction, GeneTarget, Pathways, Network
